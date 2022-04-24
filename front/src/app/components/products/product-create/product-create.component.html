@@ -1,0 +1,48 @@
+<mat-card>
+  <mat-card-title> Novo Produto </mat-card-title>
+
+  <form [formGroup]="form">
+    <mat-form-field>
+      <input matInput placeholder="Nome" formControlName="name" name="name" />
+    </mat-form-field>
+    <mat-form-field>
+      <input
+        matInput
+        placeholder="Preço"
+        formControlName="price"
+        type="number"
+        name="price"
+      />
+    </mat-form-field>
+    <div>
+      <mat-form-field>
+        <input
+          matInput
+          placeholder="Valores"
+          type="number"
+          name="valores"
+          formControlName="valores"
+        />
+      </mat-form-field>
+  
+      <button (click)="addValores()" [disabled]="this.form.value.valores <= 0" >add</button>
+    </div>
+  
+    <div class="box">
+      <div class="boxc" *ngFor="let v of arr">{{ v }}</div>
+    </div>
+  </form>
+
+  <button
+    mat-raised-button
+    (click)="createProduct()"
+    color="primary"
+    [disabled]="!this.form.valid"
+  >
+    Salvar
+  </button>
+
+  <button mat-raised-button color="secondary" (click)="backToProduct()">
+    Cancelar
+  </button>
+</mat-card>

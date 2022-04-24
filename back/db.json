@@ -1,0 +1,26 @@
+{
+  "products": [
+    {
+      "name": "fdsfdsdfdsf21312312",
+      "price": "123",
+      "id": 1
+    },
+    {
+      "name": "Otto",
+      "price": 123,
+      "id": 2
+    },
+    {
+      "name": "1",
+      "price": 2,
+      "valores": 3123,
+      "id": 3
+    },
+    {
+      "name": "itti",
+      "price": 11,
+      "valores": 0,
+      "id": 4
+    }
+  ]
+}
